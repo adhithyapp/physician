@@ -1,0 +1,104 @@
+<form >
+        <div>
+                <input (click)="addUser()"type="button"value="Submit">
+                
+                <input type="reset"value="Cancel">
+                
+                </div><br>
+        <div style="color: blue">
+   PHYSICIAN INFORMATION</div><br><br>
+ 
+<div class="form-group">
+       
+        <label for="lastName">LastName</label>
+        <input required [(ngModel)]="physobj.lastName" id="lastName"type="text"class="form-control"placeholder="Enter Last Name"class="form-control"[ngModelOptions]="{standalone: true}">
+     
+    <label for="firstName">FirstName</label>
+ 
+   <input required [(ngModel)]="physobj.firstName" id="firstName"type="text"class="form-control"placeholder="Enter First Name"class="form-control"[ngModelOptions]="{standalone: true}">
+    
+   <div style="color: red">
+                {{errormsgl}} {{errormsgf}}</div>   <br><br><br>
+</div>
+
+    
+            <div class="form-group">
+<label for="middleName">MiddleName</label>
+<input required [(ngModel)]="physobj.middleName" id="middleName"type="text"class="form-control"placeholder="Enter Middle Name"class="form-control"[ngModelOptions]="{standalone: true}">
+</div>
+<div style="color: red">
+        {{errormsgm}}</div><br><br>
+
+
+
+        <div class="form-group">
+<label for="title">Title</label>
+<input required [(ngModel)]="physobj.title" id="title"type="text"class="form-control"placeholder="  Enter Title"class="form-control"[ngModelOptions]="{standalone: true}">
+
+
+<label for="clinic">Clinic</label>
+<input required [(ngModel)]="physobj.clinic" id="clinic"type="text"class="form-control"placeholder="Enter Hire Date"class="form-control"[ngModelOptions]="{standalone: true}">
+</div>
+<div style="color: red">
+        {{errormsgt}} {{errormsgc}}</div><br><br>
+
+   
+<div class="form-group">
+<label for="addressLine1">AddressLine1</label>
+<input required [(ngModel)]="physobj.addressLine1" id="addressLine1"type="text"class="form-control"placeholder="Enter Address Line1"class="form-control"[ngModelOptions]="{standalone: true}">
+
+
+<label for="addressLine2">AddressLine2</label>
+<input required [(ngModel)]="physobj.addressLine2" id="addressLine2"type="text"class="form-control"placeholder="Enter Address Line2"class="form-control"[ngModelOptions]="{standalone: true}">
+</div>
+ <div style="color: red">
+    {{errormsga1}}{{errormsga2}}</div><br><br>
+
+      
+        <div class="form-group">
+        <label for="city">City</label>
+        <input required [(ngModel)]="physobj.city" id="city"type="text"class="form-control"placeholder="Enter City"class="form-control"[ngModelOptions]="{standalone: true}">
+
+    <label for="state">State</label>
+    <input required [(ngModel)]="physobj.state" id="state"type="text"class="form-control"placeholder="Enter State"class="form-control"[ngModelOptions]="{standalone: true}">
+
+    
+    <label for="zip">Zip</label>
+    <input required [(ngModel)]="physobj.zip" id="zip"type="text"class="form-control"placeholder="Enter Zip"class="form-control"[ngModelOptions]="{standalone: true}">
+</div>
+<div style="color: red">
+        {{errormsgcit}} {{errormsgst}}  {{errormsgzi}}</div><br><br>
+
+
+
+<div class="form-group">
+<label for="cellPhone">Cell Phone</label>
+<input required [(ngModel)]="physobj.cellPhone"  id="cellPhone"type="tel"class="form-control"placeholder="Enter Cellphone Number"class="form-control"[ngModelOptions]="{standalone: true}">
+
+<label for="otherPhone">Other Phone</label>
+<input required [(ngModel)]="physobj.otherPhone"  id="otherPhone"type="text"class="form-control"placeholder="Enter Other Number"class="form-control"[ngModelOptions]="{standalone: true}">
+</div>
+<div style="color: red">
+        {{errormsgcel}}   {{errormsgot}}</div><br><br>
+
+
+
+
+    <div class="form-group">
+<label for="Email">Email</label>
+<input required [(ngModel)]="physobj.email" id="email"type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" class="form-control" required placeholder="Enter Email"class="form-control"[ngModelOptions]="{standalone: true}" >
+*ngIf="email.value !== '' && email.untouched && email.invalid"
+
+<label for="fax">Fax</label>
+<input required [(ngModel)]="physobj.fax" id="fax"type="text"class="form-control"placeholder="Enter Fax"class="form-control"[ngModelOptions]="{standalone: true}">
+
+</div>
+<div style="color: red">
+        {{errormsgem}}  {{errormsgfa}}</div><br><br><br>
+<div>
+<input (click)="addUser()"type="button"value="Submit">
+
+<input type="reset"value="Cancel">
+
+</div>
+</form>
